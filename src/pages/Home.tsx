@@ -8,6 +8,29 @@ export const Home = () => {
         { value: '39,000', label: 'Total Addresses' },
     ];
 
+    const cards = [
+        {
+            title: "Leverage Trade Any Token",
+            text: "Margin trade thousands of tokens with best prices from 1inch, Uniswap, PancakeSwap, Sushiswap, and borrow with 90% reduced rate than other platforms.",
+            icon: "🔁",
+        },
+        {
+            title: "Single-Sided Lending",
+            text: "Isolated and independent lending pools facilitate single-sided token lending with minimal risk. Margin interest incurred by borrower is paid out to lenders.",
+            icon: "💰",
+        },
+        {
+            title: "Borrow Any Token",
+            text: "Allow to pledge any token as collateral, and borrow another token in a token pair as long as sufficient liquidity provided.",
+            icon: "📥",
+        },
+        {
+            title: "Multichain",
+            text: "Deployed to Ethereum, BNB Chain, Arbitrum, and Kucoin Community Chain, and empowering more EVM-compatible chains soon.",
+            icon: "🌐",
+        },
+    ]
+
     return (
         <div className="min-h-screen bg-[#0B0F23] font-sans flex flex-col">
 
@@ -48,8 +71,19 @@ export const Home = () => {
                     </div>
                 </section>
 
-                <section className="flex flex-col w-[65vw]">
+                <section className="flex flex-col w-[65vw] items-center py-18">
+                    <div className="text-5xl font-bold pb-10">Fully Permissionless</div>
+                    <p className="text-center mb-20">Anyone can create landing and trading pools for any traiding pair available on a DEX, with <br /> default interest rate and risk parameters, in a single click.</p>
                     
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                        {cards.map(({ title, text, icon }, i) => (
+                            <div key={i} className="rounded-2xl p-6 bg-gradient-to-br from-[#1a1a3f] to-[#14142a] border border-white/10 shadow-md backdrop-blur-sm text-white">
+                                <div className="text-3xl mb-4">{icon}</div>
+                                <h3 className="text-lg font-semibold mb-2">{title}</h3>
+                                <p className="text-sm text-gray-300 w-md">{text}</p>
+                            </div>
+                        ))}
+                    </div>
                 </section>
             </main>
         </div>
