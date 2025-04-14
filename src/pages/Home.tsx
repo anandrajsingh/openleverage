@@ -74,7 +74,7 @@ export const Home = () => {
                 <section className="flex flex-col w-[65vw] items-center py-18">
                     <div className="text-5xl font-bold pb-10">Fully Permissionless</div>
                     <p className="text-center mb-20">Anyone can create landing and trading pools for any traiding pair available on a DEX, with <br /> default interest rate and risk parameters, in a single click.</p>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
                         {cards.map(({ title, text, icon }, i) => (
                             <div key={i} className="rounded-2xl p-6 bg-gradient-to-br from-[#1a1a3f] to-[#14142a] border border-white/10 shadow-md backdrop-blur-sm text-white">
@@ -83,6 +83,38 @@ export const Home = () => {
                                 <p className="text-sm text-gray-300 w-md">{text}</p>
                             </div>
                         ))}
+                    </div>
+                </section>
+
+                <section className="flex flex-col w-[65vw] py-18">
+                    <div className="flex justify-between w-full">
+                        <div className="text-5xl w-md font-bold">An evolving and expanding network of DeFi</div>
+                        <div className="flex text-sm text-gray-300 items-center w-sm">OpenLeverage brings DeFi protocols, yeild aggregators, the LSD Protocol, wallet, chains and various tools together to create a thriving and open ecosystem.</div>
+                    </div>
+                    <div className="flex">
+                        <img src="/dome-with-coin.png" alt="" className="w-1/2"/>
+                        <div className="flex w-1/2 items-center justify-between">
+                            <div className="flex flex-col gap-8">
+                                <div className="flex flex-col w-3xs gap-2">
+                                    <div className="font-bold text-xl">BlockChain Networks</div>
+                                    <div className="text-sm">Deployed in Ethereum, BNB Chain, Arbitrum, and Kucoin Community Chain and empowering more EVM-compatible chanins soon.</div>
+                                </div>
+                                <div className="flex flex-col w-3xs gap-2">
+                                    <div className="font-bold text-xl">Mulitichain</div>
+                                    <div className="text-sm">Deployed in Ethereum, BNB Chain, Arbitrum, and Kucoin Community Chain and empowering more EVM-compatible chanins soon.</div>
+                                </div>
+                            </div>
+                            <div className="flex flex-col gap-8">
+                                <div className="flex flex-col w-3xs gap-2 text-center">
+                                    <div className="font-bold text-7xl">557</div>
+                                    <div className="text-sm">Markets</div>
+                                </div>
+                                <div className="flex flex-col w-3xs gap-2 text-center">
+                                    <div className="font-bold text-7xl">100+</div>
+                                    <div className="text-sm">Integration, and growing</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>
