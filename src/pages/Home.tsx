@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export const Home = () => {
 
     const stats = [
@@ -31,22 +33,58 @@ export const Home = () => {
         },
     ]
 
+    const [sidebarOpen, setSidebarOpen] = useState(false);
+
     return (
         <div className="min-h-screen bg-[#0B0F23] font-sans flex flex-col">
 
             <header className="flex justify-between items-center px-6 py-4 border-b border-gray-600">
                 <h1 className="text-xl font-bold">OpenLeverage</h1>
-                <nav className="space-x-6 text-sm">
+                <div className="hidden md:flex gap-20">
+                    <nav className="space-x-6 text-sm">
+                        <a href="#" className="hover:text-purple-400">Ecosystem</a>
+                        <a href="#" className="hover:text-purple-400">Docs</a>
+                        <a href="#" className="hover:text-purple-400">Developers</a>
+                        <a href="#" className="hover:text-purple-400">Community</a>
+                    </nav>
+                    <button className="flex gap-2 items-center">
+                        <div className="text-sm font-semibold">ENTER APP</div>
+                        <img src="/right-arrow.png" alt="enter app" className="h-5 w-5 filter invert" />
+                    </button>
+                </div>
+                <button className="md:hidden pr-3" onClick={() => setSidebarOpen(true)}>
+                    <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth={2}
+                        viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </header>
+
+            {sidebarOpen && (
+                <div
+                    className="fixed inset-0 bg-black bg-opacity-50 z-40"
+                    onClick={() => setSidebarOpen(false)}
+                />
+            )}
+
+            <div className={`fixed top-0 left-0 h-full w-64 bg-gray-900 p-6 z-50 transform transition-transform duration-300 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+                <button className="mb-6" onClick={() => setSidebarOpen(false)}>
+                    <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth={2}
+                        viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+                <nav className="flex flex-col text-sm gap-4">
                     <a href="#" className="hover:text-purple-400">Ecosystem</a>
                     <a href="#" className="hover:text-purple-400">Docs</a>
                     <a href="#" className="hover:text-purple-400">Developers</a>
                     <a href="#" className="hover:text-purple-400">Community</a>
                 </nav>
-                <button className="flex gap-2">
+                <button className="mt-10 flex gap-2 items-center">
                     <div className="text-sm font-semibold">ENTER APP</div>
                     <img src="/right-arrow.png" alt="enter app" className="h-5 w-5 filter invert" />
                 </button>
-            </header>
+            </div>
 
             <main className="flex flex-col items-center">
                 <section className="flex flex-col w-[65vw] py-18 gap-8">
@@ -73,7 +111,7 @@ export const Home = () => {
 
                 <section className="flex flex-col w-[65vw] items-center py-18">
                     <div className="text-5xl font-bold pb-10">Fully Permissionless</div>
-                    <p className="text-center mb-20">Anyone can create landing and trading pools for any traiding pair available on a DEX, with <br /> default interest rate and risk parameters, in a single click.</p>
+                    <p className="text-center mb-20">Anyone can create lending and trading pools for any trading pair available on a DEX, with <br /> default interest rate and risk parameters, in a single click.</p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
                         {cards.map(({ title, text, icon }, i) => (
@@ -89,7 +127,7 @@ export const Home = () => {
                 <section className="flex flex-col w-[65vw] py-18">
                     <div className="flex justify-between w-full">
                         <div className="text-5xl w-md font-bold">An evolving and expanding network of DeFi</div>
-                        <div className="flex text-sm text-gray-300 items-center w-sm">OpenLeverage brings DeFi protocols, yeild aggregators, the LSD Protocol, wallet, chains and various tools together to create a thriving and open ecosystem.</div>
+                        <div className="flex text-sm text-gray-300 items-center w-sm">OpenLeverage brings DeFi protocols, yield aggregators, the LSD Protocol, wallet, chains and various tools together to create a thriving and open ecosystem.</div>
                     </div>
                     <div className="flex">
                         <img src="/dome-with-coin.png" alt="" className="w-1/2" />
@@ -97,11 +135,11 @@ export const Home = () => {
                             <div className="flex flex-col gap-8">
                                 <div className="flex flex-col w-3xs gap-2">
                                     <div className="font-bold text-xl">BlockChain Networks</div>
-                                    <div className="text-sm">Deployed in Ethereum, BNB Chain, Arbitrum, and Kucoin Community Chain and empowering more EVM-compatible chanins soon.</div>
+                                    <div className="text-sm">Deployed in Ethereum, BNB Chain, Arbitrum, and Kucoin Community Chain and empowering more EVM-compatible chains soon.</div>
                                 </div>
                                 <div className="flex flex-col w-3xs gap-2">
-                                    <div className="font-bold text-xl">Mulitichain</div>
-                                    <div className="text-sm">Deployed in Ethereum, BNB Chain, Arbitrum, and Kucoin Community Chain and empowering more EVM-compatible chanins soon.</div>
+                                    <div className="font-bold text-xl">Multichain</div>
+                                    <div className="text-sm">Deployed in Ethereum, BNB Chain, Arbitrum, and Kucoin Community Chain and empowering more EVM-compatible chains soon.</div>
                                 </div>
                             </div>
                             <div className="flex flex-col gap-8">
@@ -158,7 +196,7 @@ export const Home = () => {
                     <div className="flex w-full py-18 justify-between">
                         <div className="w-1/4 flex flex-col gap-3">
                             <div className="text-3xl font-bold">OpenLeverage</div>
-                            <div className="w-3xs">With permission less lending borrowing, and margin trading decentralized exchanges.</div>
+                            <div className="w-3xs">With permissionless lending borrowing, and margin trading decentralized exchanges.</div>
                         </div>
                         <div className="w-1/4 flex flex-col gap-3">
                             <div className="text-xl font-semibold">PRODUCTS</div>
@@ -166,7 +204,7 @@ export const Home = () => {
                                 <li className="mb-2"><a href="#" className="hover:text-indigo-400">Margin Trading</a></li>
                                 <li className="mb-2"><a href="#" className="hover:text-indigo-400">Deposit</a></li>
                                 <li className="mb-2"><a href="#" className="hover:text-indigo-400">Borrow</a></li>
-                                <li className="mb-2"><a href="#" className="hover:text-indigo-400">Refferal Program</a></li>
+                                <li className="mb-2"><a href="#" className="hover:text-indigo-400">Referal Program</a></li>
                             </ul>
                         </div>
                         <div className="w-1/4 flex flex-col gap-3">
