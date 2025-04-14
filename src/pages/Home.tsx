@@ -148,7 +148,57 @@ export const Home = () => {
                         </div>
                     </div>
                 </section>
+
+                <section className="flex flex-col  w-[65vw] py-18 gap-4">
+                    <div className="px-6 py-20 bg-gradient-to-r from-[#5B21B6] via-[#7C3AED] to-[#8B5CF6] rounded-xl w-full mx-auto text-center">
+                        <h4 className="text-6xl font-extrabold mb-4">Join Our Community</h4>
+                        <p className="text-white/80 mb-6">Read what top blockchain media companies have to say about OpenLeverage.</p>
+                        <button className="px-6 py-2 bg-white text-purple-700 rounded-full font-bold">Get Started</button>
+                    </div>
+                    <div className="flex w-full py-18 justify-between">
+                        <div className="w-1/4 flex flex-col gap-3">
+                            <div className="text-3xl font-bold">OpenLeverage</div>
+                            <div className="w-3xs">With permission less lending borrowing, and margin trading decentralized exchanges.</div>
+                        </div>
+                        <div className="w-1/4 flex flex-col gap-3">
+                            <div className="text-xl font-semibold">PRODUCTS</div>
+                            <ul className="text-gray-400">
+                                <li className="mb-2"><a href="#" className="hover:text-indigo-400">Margin Trading</a></li>
+                                <li className="mb-2"><a href="#" className="hover:text-indigo-400">Deposit</a></li>
+                                <li className="mb-2"><a href="#" className="hover:text-indigo-400">Borrow</a></li>
+                                <li className="mb-2"><a href="#" className="hover:text-indigo-400">Refferal Program</a></li>
+                            </ul>
+                        </div>
+                        <div className="w-1/4 flex flex-col gap-3">
+                            <div className="text-xl font-semibold">PRODUCTS</div>
+                            <ul className="text-gray-400">
+                                <li className="mb-2"><a href="#" className="hover:text-indigo-400">Docs</a></li>
+                                <li className="mb-2"><a href="#" className="hover:text-indigo-400">Github</a></li>
+                                <li className="mb-2"><a href="#" className="hover:text-indigo-400">Audit</a></li>
+                            </ul>
+                        </div>
+                        <div className="w-1/4 flex flex-col gap-3">
+                            <div className="text-xl font-semibold">PRODUCTS</div>
+                            <ul className="text-gray-400">
+                                <li className="mb-2"><a href="#" className="hover:text-indigo-400">Careers</a></li>
+                                <li className="mb-2"><a href="#" className="hover:text-indigo-400">Contact Us</a></li>
+                                <li className="mb-2"><a href="#" className="hover:text-indigo-400">Collaboration</a></li>
+                                <li className="mb-2"><a href="#" className="hover:text-indigo-400">Terms of Services</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
             </main>
+
+            <footer className="flex items-center border-t border-gray-600 justify-between px-10 py-4">
+                <p>&copy; OpenLeverage 2025. All rights reserved.</p>
+                <ul className="text-gray-400 flex gap-6">
+                    <li className="mb-2"><a href="#" className="hover:text-indigo-400">Careers</a></li>
+                    <li className="mb-2"><a href="#" className="hover:text-indigo-400">Contact Us</a></li>
+                    <li className="mb-2"><a href="#" className="hover:text-indigo-400">Collaboration</a></li>
+                    <li className="mb-2"><a href="#" className="hover:text-indigo-400">Terms of Services</a></li>
+                </ul>
+            </footer>
         </div>
     )
 }
