@@ -92,7 +92,7 @@ export const Home = () => {
                         <div className="flex text-sm text-gray-300 items-center w-sm">OpenLeverage brings DeFi protocols, yeild aggregators, the LSD Protocol, wallet, chains and various tools together to create a thriving and open ecosystem.</div>
                     </div>
                     <div className="flex">
-                        <img src="/dome-with-coin.png" alt="" className="w-1/2"/>
+                        <img src="/dome-with-coin.png" alt="" className="w-1/2" />
                         <div className="flex w-1/2 items-center justify-between">
                             <div className="flex flex-col gap-8">
                                 <div className="flex flex-col w-3xs gap-2">
@@ -113,6 +113,37 @@ export const Home = () => {
                                     <div className="font-bold text-7xl">100+</div>
                                     <div className="text-sm">Integration, and growing</div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="flex flex-col w-[65vw] py-18 items-center">
+                    <div className="text-6xl font-bold text-purple-200">As Featured in Major Publications</div>
+                    <div className="text-lg py-10 text-gray-400">Read what top blockchain media companies have to say about OpenLeverage.</div>
+                    <div className="flex py-5 w-full gap-5">
+                        <div className="flex flex-col w-1/3 gap-3 h-96 ">
+                            <div className="flex flex-col h-1/2 items-center justify-center bg-gradient-to-br from-[#1a1a3f] to-[#14142a] border border-white/10 shadow-md rounded-tl-2xl">
+                                <div className="text-4xl font-extrabold">CoinDesk</div>
+                                <div className="text-sm text-gray-400">Unleashing liquidity in DeFi Trading</div>
+                            </div>
+                            <div className="flex flex-col h-1/2 items-center justify-center bg-gradient-to-br from-[#1a1a3f] to-[#14142a] border border-white/10 shadow-md rounded-bl-2xl">
+                                <div className="text-4xl font-extrabold">yahoo!finance</div>
+                                <div className="text-sm text-gray-400">Openleverage Launches Mainnet on Ethereum</div>
+                            </div>
+                        </div>
+                        <div className="flex flex-col gap-3 w-1/3 items-center justify-center bg-gradient-to-br from-[#1a1a3f] to-[#14142a] border border-white/10 shadow-md">
+                            <div className="text-4xl font-extrabold">AMB<span className="text-3xl"> CRYPTO</span></div>
+                            <div className=" text-gray-400 w-2/3 text-center">OpenLeverage: A new possibility of decentralized derivatives</div>
+                        </div>
+                        <div className="flex flex-col w-1/3 gap-3 h-96">
+                            <div className="flex flex-col h-1/2 items-center justify-center bg-gradient-to-br from-[#1a1a3f] to-[#14142a] border border-white/10 shadow-md rounded-tr-2xl">
+                                <div className="text-2xl font-semibold">COINTELEGRAPH</div>
+                                <div className="text-sm text-gray-400">OpenLeverage Launches Mainnet on Ethereum</div>
+                            </div>
+                            <div className="flex flex-col h-1/2 items-center justify-center bg-gradient-to-br from-[#1a1a3f] to-[#14142a] border border-white/10 shadow-md rounded-br-2xl">
+                                <div className="text-4xl font-extrabold">NEWSBTC</div>
+                                <div className="text-sm text-gray-400">Openleverage Testnet V2 Goes Alive</div>
                             </div>
                         </div>
                     </div>
