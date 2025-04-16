@@ -36,7 +36,7 @@ export const Home = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
     return (
-        <div className="min-h-screen bg-[#0B0F23] font-sans flex flex-col">
+        <div className="min-h-screen w-full bg-[#0B0F23] font-sans flex flex-col">
 
             <header className="flex justify-between items-center px-6 py-4 border-b border-gray-600">
                 <h1 className="text-xl font-bold">OpenLeverage</h1>
@@ -87,17 +87,18 @@ export const Home = () => {
             </div>
 
             <main className="flex flex-col items-center">
-                <section className="flex flex-col w-[65vw] py-18 gap-8">
-                    <div className="text-7xl font-bold">Money Market</div>
-                    <div className="text-purple-400 text-8xl font-bold">WITH POSSIBILITIES</div>
-                    <div className="relative w-full h-40">
-                        <p className="absolute left-1/2 w-1/2 h-full flex items-center justify-center text-lg pr-24">
+                <section className="flex flex-col md:w-[65vw] py-8 md:py-18 gap-3 md:gap-8 mx-4">
+                    <div className="text-4xl  sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">Money Market</div>
+                    <div className="text-purple-400 text-4xl md:text-7xl lg:text-8xl font-bold ">WITH POSSIBILITIES</div>
+                    <div className="flex w-full py-10">
+                        <div className="hidden md:flex w-1/2"/>
+                        <p className="md:w-1/2 h-full flex items-center justify-center text-lg">
                             With permissionless lending, borrowing, and margin trading, OpenLeverage
                             empowers any asset, and direct positions on any pairs or decentralized exchanges.
                         </p>
                     </div>
 
-                    <img src="/mountain-purple.jpg" alt="" />
+                    <img src="/mountain-purple.jpg" alt="purple-mountain" />
 
                     <div className="grid grid-cols-1 md:grid-cols-5 gap-8 my-10">
                         {stats.map((stat, index) => (
