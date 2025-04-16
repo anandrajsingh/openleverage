@@ -110,29 +110,29 @@ export const Home = () => {
                     </div>
                 </section>
 
-                <section className="flex flex-col w-[65vw] items-center py-18">
-                    <div className="text-5xl font-bold pb-10">Fully Permissionless</div>
-                    <p className="text-center mb-20">Anyone can create lending and trading pools for any trading pair available on a DEX, with <br /> default interest rate and risk parameters, in a single click.</p>
+                <section className="flex flex-col md:w-[65vw] items-center py-18 mx-4">
+                    <div className="text-5xl font-bold text-center text-purple-300 pb-10">Fully Permissionless</div>
+                    <p className="text-center mb-20">Anyone can create lending and trading pools for any trading pair available on a DEX, with <br className="hidden sm:block" /> default interest rate and risk parameters, in a single click.</p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
                         {cards.map(({ title, text, icon }, i) => (
                             <div key={i} className="rounded-2xl p-6 bg-gradient-to-br from-[#1a1a3f] to-[#14142a] border border-white/10 shadow-md backdrop-blur-sm text-white">
                                 <div className="text-3xl mb-4">{icon}</div>
                                 <h3 className="text-lg font-semibold mb-2">{title}</h3>
-                                <p className="text-sm text-gray-300 w-md">{text}</p>
+                                <p className="text-sm text-gray-300">{text}</p>
                             </div>
                         ))}
                     </div>
                 </section>
 
-                <section className="flex flex-col w-[65vw] py-18">
-                    <div className="flex justify-between w-full">
-                        <div className="text-5xl w-md font-bold">An evolving and expanding network of DeFi</div>
+                <section className="flex flex-col md:w-[65vw] md:py-18 mx-4">
+                    <div className="flex flex-col md:flex-row justify-between gap-6 md:gap-0">
+                        <div className="text-5xl md:w-md font-bold">An evolving and expanding network of DeFi</div>
                         <div className="flex text-sm text-gray-300 items-center w-sm">OpenLeverage brings DeFi protocols, yield aggregators, the LSD Protocol, wallet, chains and various tools together to create a thriving and open ecosystem.</div>
                     </div>
-                    <div className="flex">
-                        <img src="/dome-with-coin.png" alt="" className="w-1/2" />
-                        <div className="flex w-1/2 items-center justify-between">
+                    <div className="flex flex-col md:flex-row gap-10">
+                        <img src="/dome-with-coin.png" alt="" className="md:w-1/2" />
+                        <div className="flex flex-col md:flex-row md:w-1/2 items-center justify-between gap-20">
                             <div className="flex flex-col gap-8">
                                 <div className="flex flex-col w-3xs gap-2">
                                     <div className="font-bold text-xl">BlockChain Networks</div>
@@ -157,11 +157,11 @@ export const Home = () => {
                     </div>
                 </section>
 
-                <section className="flex flex-col w-[65vw] py-18 items-center">
+                <section className="flex flex-col md:w-[65vw] py-18 items-center mx-4">
                     <div className="text-6xl font-bold text-purple-200">As Featured in Major Publications</div>
                     <div className="text-lg py-10 text-gray-400">Read what top blockchain media companies have to say about OpenLeverage.</div>
                     <div className="flex py-5 w-full gap-5">
-                        <div className="flex flex-col w-1/3 gap-3 h-96 ">
+                        <div className="flex flex-col w-1/3 gap-3 h-96">
                             <div className="flex flex-col h-1/2 items-center justify-center bg-gradient-to-br from-[#1a1a3f] to-[#14142a] border border-white/10 shadow-md rounded-tl-2xl">
                                 <div className="text-4xl font-extrabold">CoinDesk</div>
                                 <div className="text-sm text-gray-400">Unleashing liquidity in DeFi Trading</div>
