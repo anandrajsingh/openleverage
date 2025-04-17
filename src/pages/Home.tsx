@@ -91,7 +91,7 @@ export const Home = () => {
                     <div className="text-4xl  sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">Money Market</div>
                     <div className="text-purple-400 text-4xl md:text-7xl lg:text-8xl font-bold ">WITH POSSIBILITIES</div>
                     <div className="flex w-full py-10">
-                        <div className="hidden md:flex w-1/2"/>
+                        <div className="hidden md:flex w-1/2" />
                         <p className="md:w-1/2 h-full flex items-center justify-center text-lg">
                             With permissionless lending, borrowing, and margin trading, OpenLeverage
                             empowers any asset, and direct positions on any pairs or decentralized exchanges.
@@ -160,27 +160,27 @@ export const Home = () => {
                 <section className="flex flex-col md:w-[65vw] py-18 items-center mx-4">
                     <div className="text-6xl font-bold text-purple-200">As Featured in Major Publications</div>
                     <div className="text-lg py-10 text-gray-400">Read what top blockchain media companies have to say about OpenLeverage.</div>
-                    <div className="flex py-5 w-full gap-5">
-                        <div className="flex flex-col w-1/3 gap-3 h-96">
-                            <div className="flex flex-col h-1/2 items-center justify-center bg-gradient-to-br from-[#1a1a3f] to-[#14142a] border border-white/10 shadow-md rounded-tl-2xl">
+                    <div className="flex flex-col md:flex-row py-5 w-full gap-3 md:gap-5">
+                        <div className="flex flex-col md:w-1/3 gap-3 h-96">
+                            <div className="flex flex-col h-1/2 items-center justify-center bg-gradient-to-br from-[#1a1a3f] to-[#14142a] border border-white/10 shadow-md rounded-2xl">
                                 <div className="text-4xl font-extrabold">CoinDesk</div>
                                 <div className="text-sm text-gray-400">Unleashing liquidity in DeFi Trading</div>
                             </div>
-                            <div className="flex flex-col h-1/2 items-center justify-center bg-gradient-to-br from-[#1a1a3f] to-[#14142a] border border-white/10 shadow-md rounded-bl-2xl">
+                            <div className="flex flex-col h-1/2 items-center justify-center bg-gradient-to-br from-[#1a1a3f] to-[#14142a] border border-white/10 shadow-md rounded-2xl">
                                 <div className="text-4xl font-extrabold">yahoo!finance</div>
                                 <div className="text-sm text-gray-400">Openleverage Launches Mainnet on Ethereum</div>
                             </div>
                         </div>
-                        <div className="flex flex-col gap-3 w-1/3 items-center justify-center bg-gradient-to-br from-[#1a1a3f] to-[#14142a] border border-white/10 shadow-md">
+                        <div className="flex flex-col gap-3 md:w-1/3 items-center justify-center bg-gradient-to-br from-[#1a1a3f] to-[#14142a] border border-white/10 shadow-md h-48 md:h-96 rounded-2xl">
                             <div className="text-4xl font-extrabold">AMB<span className="text-3xl"> CRYPTO</span></div>
                             <div className=" text-gray-400 w-2/3 text-center">OpenLeverage: A new possibility of decentralized derivatives</div>
                         </div>
-                        <div className="flex flex-col w-1/3 gap-3 h-96">
-                            <div className="flex flex-col h-1/2 items-center justify-center bg-gradient-to-br from-[#1a1a3f] to-[#14142a] border border-white/10 shadow-md rounded-tr-2xl">
+                        <div className="flex flex-col md:w-1/3 gap-3 h-96">
+                            <div className="flex flex-col h-1/2 items-center justify-center bg-gradient-to-br from-[#1a1a3f] to-[#14142a] border border-white/10 shadow-md rounded-2xl">
                                 <div className="text-2xl font-semibold">COINTELEGRAPH</div>
                                 <div className="text-sm text-gray-400">OpenLeverage Launches Mainnet on Ethereum</div>
                             </div>
-                            <div className="flex flex-col h-1/2 items-center justify-center bg-gradient-to-br from-[#1a1a3f] to-[#14142a] border border-white/10 shadow-md rounded-br-2xl">
+                            <div className="flex flex-col h-1/2 items-center justify-center bg-gradient-to-br from-[#1a1a3f] to-[#14142a] border border-white/10 shadow-md rounded-2xl">
                                 <div className="text-4xl font-extrabold">NEWSBTC</div>
                                 <div className="text-sm text-gray-400">Openleverage Testnet V2 Goes Alive</div>
                             </div>
@@ -188,18 +188,18 @@ export const Home = () => {
                     </div>
                 </section>
 
-                <section className="flex flex-col  w-[65vw] py-18 gap-4">
+                <section className="flex flex-col  md:w-[65vw] md:py-18 gap-4 mx-4">
                     <div className="px-6 py-20 bg-gradient-to-r from-[#5B21B6] via-[#7C3AED] to-[#8B5CF6] rounded-xl w-full mx-auto text-center">
                         <h4 className="text-6xl font-extrabold mb-4">Join Our Community</h4>
                         <p className="text-white/80 mb-6">Read what top blockchain media companies have to say about OpenLeverage.</p>
                         <button className="px-6 py-2 bg-white text-purple-700 rounded-full font-bold">Get Started</button>
                     </div>
-                    <div className="flex w-full py-18 justify-between">
-                        <div className="w-1/4 flex flex-col gap-3">
+                    <div className="flex flex-col md:flex-row w-full py-18 mx-4 justify-between">
+                        <div className="md:w-1/4 mb-10 flex flex-col gap-3">
                             <div className="text-3xl font-bold">OpenLeverage</div>
                             <div className="w-3xs">With permissionless lending borrowing, and margin trading decentralized exchanges.</div>
                         </div>
-                        <div className="w-1/4 flex flex-col gap-3">
+                        <div className="md:w-1/4 flex flex-col gap-3">
                             <div className="text-xl font-semibold">PRODUCTS</div>
                             <ul className="text-gray-400">
                                 <li className="mb-2"><a href="#" className="hover:text-indigo-400">Margin Trading</a></li>
@@ -208,7 +208,7 @@ export const Home = () => {
                                 <li className="mb-2"><a href="#" className="hover:text-indigo-400">Referal Program</a></li>
                             </ul>
                         </div>
-                        <div className="w-1/4 flex flex-col gap-3">
+                        <div className="md:w-1/4 flex flex-col gap-3">
                             <div className="text-xl font-semibold">PRODUCTS</div>
                             <ul className="text-gray-400">
                                 <li className="mb-2"><a href="#" className="hover:text-indigo-400">Docs</a></li>
@@ -216,7 +216,7 @@ export const Home = () => {
                                 <li className="mb-2"><a href="#" className="hover:text-indigo-400">Audit</a></li>
                             </ul>
                         </div>
-                        <div className="w-1/4 flex flex-col gap-3">
+                        <div className="md:w-1/4 flex flex-col gap-3">
                             <div className="text-xl font-semibold">PRODUCTS</div>
                             <ul className="text-gray-400">
                                 <li className="mb-2"><a href="#" className="hover:text-indigo-400">Careers</a></li>
@@ -229,7 +229,7 @@ export const Home = () => {
                 </section>
             </main>
 
-            <footer className="flex items-center border-t border-gray-600 justify-between px-10 py-4">
+            <footer className="flex flex-col-reverse md:flex-row items-center border-t border-gray-600 justify-between px-10 py-4">
                 <p>&copy; OpenLeverage 2025. All rights reserved.</p>
                 <ul className="text-gray-400 flex gap-6">
                     <li className="mb-2"><a href="#" className="hover:text-indigo-400">Careers</a></li>
