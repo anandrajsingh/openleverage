@@ -35,7 +35,7 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
-          source: deployment.yaml
+          source: k8s/deployment.yaml
           target: /home/ubuntu/openleverage
         
       - name: Deploy to K3S
@@ -45,5 +45,5 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            kubectl apply -f /home/ubuntu/openleverage/deployment.yaml
+            kubectl apply -f /home/ubuntu/openleverage/k8s/deployment.yaml
             kubectl rollout status deployment/openleverage-app
