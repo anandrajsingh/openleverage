@@ -15,6 +15,7 @@ spec:
       containers:
         - name: openleverage
           image: anandrajsingh/openleverage:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 3000
 
