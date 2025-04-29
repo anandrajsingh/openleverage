@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: openleverage-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: openleverage
+  template:
+    metadata:
+      labels:
+        app: openleverage
+    spec:
+      containers:
+        - name: openleverage
+          image: anandrajsingh/openleverage:latest
+          ports:
+            - containerPort: 3000
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: openleverage-service
+spec:
+  selector:
+    app: openleverage
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+      nodePort: 30080
+  type: NodePort
