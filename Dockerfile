@@ -8,12 +8,12 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-FROM node:20-slim
+FROM nginx:alpine
 
-WORKDIR /app
+RUN rm -rf /usr/share/nginx/html/*
 
-COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/dist /usr/share/nginx/html
 
-EXPOSE 3000
+EXPOSE 80
 
-CMD ["server", "-s", "dist", "-l", "3000"]
+CMD ["nginx", "-g", "daemon off;"]
