@@ -45,5 +45,5 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            kubectl apply -f /home/ubuntu/openleverage/k8s/deployment.yaml
-            kubectl rollout status deployment/openleverage-app
+            sudo kubectl apply -f /home/ubuntu/openleverage/k8s/deployment.yaml
+            sudo kubectl rollout status deployment/openleverage-app
